@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkbox Labs</title>
+<meta name="description" content="Checkbox Labs is a research lab that studies how language models cite sources and when they invent them.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1d1d1f;
+    --muted: #5c5c63;
+    --accent: #2f6f5e;
+    --rule: #e3e0d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416;
+      --text: #ececee;
+      --muted: #a2a2aa;
+      --accent: #7fc4ae;
+      --rule: #2c2c31;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 18px/1.6 Georgia, "Times New Roman", serif;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 20px 48px;
+  }
+  .mark {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    position: relative;
+    vertical-align: -4px;
+    margin-right: 12px;
+  }
+  .mark::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    width: 7px;
+    height: 14px;
+    border: solid var(--accent);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  h1 {
+    font: 600 34px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 0 0 32px;
+  }
+  h2 {
+    font: 600 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 40px 0 8px;
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="mark" aria-hidden="true"></span>Checkbox Labs</h1>
+
+  <p>Checkbox Labs is a research lab that studies how large language models cite sources, and when they make sources up.</p>
+
+  <h2>What we work on</h2>
+  <p>When a model answers a question with a citation, the paper, study or court case it names may not exist. We measure how often that happens, which kinds of training make it more or less likely, and whether the model's internal state carries a signal that a citation is invented.</p>
+  <p>Our studies are pre-registered before data collection. We write and test our own analysis code, check every citation against public bibliographic databases, and run open-weight models on our own hardware.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:zain@checkboxlabs.com">zain@checkboxlabs.com</a></p>
+
+  <footer>Checkbox Labs</footer>
+</main>
+</body>
+</html>
