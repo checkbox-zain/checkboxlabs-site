@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkbox Labs</title>
 <meta name="description" content="Checkbox Labs is a research lab that studies how language models cite sources and when they invent them.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='6' fill='none' stroke='%232f6f5e' stroke-width='3'/%3E%3Cpath d='M10.5 10.5l11 11M21.5 10.5l-11 11' fill='none' stroke='%232f6f5e' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   :root {
     --bg: #fbfaf7;
@@ -25,6 +26,7 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
+    border-top: 4px solid var(--accent);
     background: var(--bg);
     color: var(--text);
     font: 18px/1.6 Georgia, "Times New Roman", serif;
@@ -44,20 +46,28 @@
     vertical-align: -4px;
     margin-right: 12px;
   }
+  .mark::before,
   .mark::after {
     content: "";
     position: absolute;
-    left: 8px;
-    top: 2px;
-    width: 7px;
-    height: 14px;
-    border: solid var(--accent);
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .mark::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
   h1 {
     font: 600 34px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
     margin: 0 0 32px;
+  }
+  .lede {
+    font-size: 22px;
+    line-height: 1.5;
   }
   h2 {
     font: 600 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -81,7 +91,7 @@
 <main>
   <h1><span class="mark" aria-hidden="true"></span>Checkbox Labs</h1>
 
-  <p>Checkbox Labs is a research lab that studies how large language models cite sources, and when they make sources up.</p>
+  <p class="lede">Checkbox Labs is a research lab that studies how large language models cite sources, and when they make sources up.</p>
 
   <h2>What we work on</h2>
   <p>When a model answers a question with a citation, the paper, study or court case it names may not exist. We measure how often that happens, which kinds of training make it more or less likely, and whether the model's internal state carries a signal that a citation is invented.</p>
@@ -90,7 +100,7 @@
   <h2>Contact</h2>
   <p><a href="mailto:zain@checkboxlabs.com">zain@checkboxlabs.com</a></p>
 
-  <footer>Checkbox Labs</footer>
+  <footer>&copy; 2026 Checkbox Labs</footer>
 </main>
 </body>
 </html>
