@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkbox Labs</title>
-<meta name="description" content="Checkbox Labs is a research lab that studies how language models cite sources and when they invent them.">
+<meta name="description" content="Checkbox Labs is an AI research lab that runs pre-registered experiments on how large language models behave.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.75' y='1.75' width='28.5' height='28.5' fill='none' stroke='%232f6f5e' stroke-width='3.5'/%3E%3Cpath d='M0 0L32 32M32 0L0 32' fill='none' stroke='%232f6f5e' stroke-width='3.5'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -65,6 +65,10 @@
     margin: 40px 0 8px;
   }
   p { margin: 0 0 16px; }
+  .study {
+    font: 600 20px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin-bottom: 12px;
+  }
   a { color: var(--accent); }
   footer {
     margin-top: 56px;
@@ -79,11 +83,15 @@
 <main>
   <h1><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29"/><path d="M0 0L32 32M32 0L0 32"/></svg>Checkbox Labs</h1>
 
-  <p class="lede">Checkbox Labs is a research lab that studies how large language models cite sources, and when they make sources up.</p>
+  <p class="lede">Checkbox Labs is an AI research lab. We test what large language models actually do, as opposed to what they appear to do, and we publish what we find, including results that cut against our own hypotheses.</p>
 
-  <h2>What we work on</h2>
-  <p>When a model answers a question with a citation, the paper, study or court case it names may not exist. We measure how often that happens, which kinds of training make it more or less likely, and whether the model's internal state carries a signal that a citation is invented.</p>
-  <p>Our studies are pre-registered before data collection. We write and test our own analysis code, check every citation against public bibliographic databases, and run open-weight models on our own hardware.</p>
+  <h2>How we work</h2>
+  <p>Every study is written down before it runs: the hypotheses, the analysis, and the rules for reading the results. We write and test our own code, run open-weight models on our own hardware, and check model outputs against public records rather than taking a model's word for it.</p>
+
+  <h2>Current study</h2>
+  <p class="study">Do language models invent sources to please the person asking?</p>
+  <p>Ask a model for a source and it will sometimes name a paper, study or court case that does not exist. Our current study asks whether models trained to be helpful do this more when the user signals what they want to hear: that they believe a source exists, or that they hope one does.</p>
+  <p>We compare four open-weight models with their post-trained versions on academic, medical and legal questions, and we look inside each model for an internal signal that a citation is made up. The study plan will be registered before any data are collected.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:zain@checkboxlabs.com">zain@checkboxlabs.com</a></p>
