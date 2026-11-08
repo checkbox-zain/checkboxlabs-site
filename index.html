@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkbox Labs</title>
-<meta name="description" content="Checkbox Labs is an AI research lab that runs pre-registered experiments on how large language models behave.">
+<meta name="description" content="Checkbox Labs is an AI research lab that tests whether language models tell you what is true or what you want to hear, with pre-registered experiments, open-weight models and public records.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.75' y='1.75' width='28.5' height='28.5' fill='none' stroke='%232f6f5e' stroke-width='3.5'/%3E%3Cpath d='M0 0L32 32M32 0L0 32' fill='none' stroke='%232f6f5e' stroke-width='3.5'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -67,7 +67,13 @@
   p { margin: 0 0 16px; }
   .study {
     font: 600 20px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
-    margin-bottom: 12px;
+    margin: 28px 0 2px;
+  }
+  h2 + .study { margin-top: 12px; }
+  .status {
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--muted);
+    margin-bottom: 10px;
   }
   a { color: var(--accent); }
   footer {
@@ -83,18 +89,22 @@
 <main>
   <h1><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29"/><path d="M0 0L32 32M32 0L0 32"/></svg>Checkbox Labs</h1>
 
-  <p class="lede">Checkbox Labs is an AI research lab. We test what large language models actually do, as opposed to what they appear to do, and we publish what we find, including results that cut against our own hypotheses.</p>
+  <p class="lede">Do language models tell you what is true, or what you want to hear? Checkbox Labs is an AI research lab that tests questions like this with pre-registered experiments, open-weight models and public records.</p>
+
+  <h2>Studies</h2>
+  <p class="study">Are fake citations a form of reward hacking?</p>
+  <p class="status">Preprint on arXiv, 2026</p>
+  <p>On 900 questions across twelve open-weight checkpoints, asking for sources raised fabrication by 47.8 points in post-trained models and not in base models. Our registered headline prediction did not hold, and the paper says so.</p>
+
+  <p class="study">Do language models invent sources to please the person asking?</p>
+  <p class="status">In design</p>
+  <p>We compare four open-weight base models with their post-trained versions on academic, medical and legal questions, vary what the user says they believe or hope, and look inside each model for a signal that a citation is made up. The plan will be registered before any data are collected.</p>
 
   <h2>How we work</h2>
-  <p>Every study is written down before it runs: the hypotheses, the analysis, and the rules for reading the results. We write and test our own code, run open-weight models on our own hardware, and check model outputs against public records rather than taking a model's word for it.</p>
-
-  <h2>Current study</h2>
-  <p class="study">Do language models invent sources to please the person asking?</p>
-  <p>Ask a model for a source and it will sometimes name a paper, study or court case that does not exist. Our current study asks whether models trained to be helpful do this more when the user signals what they want to hear: that they believe a source exists, or that they hope one does.</p>
-  <p>We compare four open-weight models with their post-trained versions on academic, medical and legal questions, and we look inside each model for an internal signal that a citation is made up. The study plan will be registered before any data are collected.</p>
+  <p>Hypotheses, analysis and decision rules are fixed before data collection. We write and test our own code, run open-weight models on our own hardware, and check each citation against Crossref, Semantic Scholar, OpenAlex, PubMed and CourtListener.</p>
 
   <h2>Contact</h2>
-  <p><a href="mailto:zain@checkboxlabs.com">zain@checkboxlabs.com</a></p>
+  <p>Questions, collaborations or data requests: <a href="mailto:zain@checkboxlabs.com">zain@checkboxlabs.com</a></p>
 
   <footer>&copy; 2026 Checkbox Labs</footer>
 </main>
